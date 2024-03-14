@@ -1,7 +1,7 @@
 /**
  * 01-basic-concept
  */
-public class basic_concept {
+public class basic_concept_01 {
     public static void main(String[] args) {
         
         System.out.println("Hello Java");
