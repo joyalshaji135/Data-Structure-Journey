@@ -1,4 +1,4 @@
-// Basic Time Complexity 
+// Basic Time Complexity Analysis
 
 public class time_complexity_02 {
     public static void main(String[] args) 
