@@ -8,6 +8,8 @@ public class array_operation_04_1 {
         array_operation_04_1 op = new array_operation_04_1();
         op.Init_Operation();
         op.Set_Operation();
+        op.Get_Operation();
+        op.Traverse_Operation();
     }
 
 // Init Operation
@@ -60,6 +62,39 @@ void Set_Operation() // O(1)
     System.out.println("arr1["+pos+"] ==> "+arr1[pos]); // O(1)
 }
 
+// Get Operation
+// Time Complexity = O(1)
+// Space Complexity = O(1)
+// Represented By : O(1)ST
+void Get_Operation() // O(1)
+{
+    int temp; // O(1)
+    temp = arr1[2]; // O(1)
+    System.out.println("arr1[2] ==> "+temp); // O(1)
+}
 
+// Traverse Operation
+// Time Complexity = O(n)
+// Space Complexity = O(1)
+// Represented By : O(1)S And O(n)T
+void Traverse_Operation()
+{
+    int store;
+    System.out.println("Traverse Operation Result :");
+    for(int i = 0; i < size; i++)
+    {
+        store = arr1[i];
+        System.out.println("arr1["+i+"] ==> "+store);
+    }
+}
+
+// Insertion Operation
+// Time Complexity 
+// Space Complexity 
+// Represented By :
+void Insertion_Operation()
+{
+    
+}
 }
 
