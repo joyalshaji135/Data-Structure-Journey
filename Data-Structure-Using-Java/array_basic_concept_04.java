@@ -7,9 +7,17 @@ public class array_basic_concept_04 {
         arr = new int[100];
         int  [] arr1;  // Standard From
         arr1 = new int[100];
+        // Array Memory Allocation Space Complexity And Time Complexity
+        // S = O(n)
+        // T = O(n)
+        // Represented By : O(n)ST
+
+
         // Array Initialization
         int arr2[] = {10,20,30,40};
         int [] arr3 = {10,20,30,40};
+
+        
     }
 }
 
