@@ -102,10 +102,11 @@ void Delete(int arr[],int size)
     int delete;
     printf("Enter Deleting Element :");
     scanf("%d",&delete);
+    
 
     for (int i = 0; i < size; i++)
     {
-        if (arr[i]==delete)
+        if (arr[i]==delete-1)
         {
             for (int j = i; j < size; j++)
             {
