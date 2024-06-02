@@ -22,11 +22,10 @@ int main() {
     scanf("%d",&array[i]);
   }
   
-  printf("Enter the Searching Element :");
-  scanf("%d",&search_element);
+  printf("Enter the Searching Element ");
   int n = sizeof(array) / sizeof(array[0]);
 
   int result = search(array, n, search_element);
 
-  (result == -1) ? printf("Element not found") : printf("Element found at index: %d", result+1);
+  (result == -1) ? printf("Element not found") : printf("Element found at index: %d", result);
 }
