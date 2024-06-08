@@ -68,7 +68,7 @@ void Initialization()
     {
         scanf("%d",&arr[i]);
     }
-    printf("\nINSERTION SUCCESSFULLY");
+    printf("\nINSERTION SUCCESSFULLY\n");
 }
 
 void Traversal()
@@ -78,7 +78,7 @@ void Traversal()
     {
         printf("Arr[%d] = %d\n",i,arr[i]);
     }
-    printf("\nTRAVERSAL SUCCESSFULLY");
+    printf("\nTRAVERSAL SUCCESSFULLY\n");
 }
 
 void Insertion()
@@ -86,7 +86,7 @@ void Insertion()
     int position,element;
     printf("Enter the position of the element :");
     scanf("%d",&position);
-    printf("Enter the %d position element :");
+    printf("Enter the %d position element :",position);
     scanf("%d",&element);
     if (position <= 0  && position > size-1)
     {
@@ -96,10 +96,11 @@ void Insertion()
     {
         for (int i = size - 1; i >= position-1; i--)
         {
-            arr[i] = arr[i+1];
+            arr[i+1] = arr[i];
         }
-        arr[position] = element;
-        printf("\nINSERTION SUCCESSFULLY");
+        arr[position - 1] = element;
+        size++;
+        printf("\nINSERTION SUCCESSFULLY\n");
     }
 }
 
@@ -116,10 +117,10 @@ void Deletion()
     {
         for (int i = deleting_position-1; i < size; i++)
         {
-            arr[i+1] = arr[i];
+            arr[i] = arr[i+1];
         }
         size--;
-        printf("\nDELETION SUCCESSFULLY");
+        printf("\nDELETION SUCCESSFULLY\n");
     }
 }
 
@@ -138,27 +139,31 @@ void Sorting()
             }   
         }
     } 
-    printf("\nSORTING SUCCESSFULLY");
+    printf("\nSORTING SUCCESSFULLY\n");
 }
 
 void Searching()
 {
-    int search_element;
+    int search_element,flag=1;
     printf("Enter the Searching Element :");
     scanf("%d",&search_element);
     for (int i = 0; i < size; i++)
     {
         if (arr[i] == search_element)
         {
-            printf("Arr[%d] = %d",i,arr[i]);
-        }
-        else
-        {
-            continue;
-            printf("Searching Element is not found");
-        }   
-    }  
-    printf("\nSEARCHING SUCCESSFULLY");
+            flag = 0;
+            break;
+        } 
+    }
+    if (flag == 0)
+    {
+        printf("Array %d Value is Present",search_element);
+    }
+    else
+    {
+        printf("%d Value is not Present");
+    }
+    printf("\nSEARCHING SUCCESSFULLY\n");
 }
 
 void Updating()
@@ -174,10 +179,6 @@ void Updating()
         {
             arr[i] = updating_value;
         }
-        else
-        {
-            printf("Updating Element is not found");
-        }
     }
-    printf("\nUPDATING SUCCESSFULLY");
+    printf("\nUPDATING SUCCESSFULLY\n");
 }
