@@ -9,6 +9,25 @@ public class Insertion_Sort {
             array[i] = sc.nextInt();
         }
 
-        System.out.println("");
+        System.out.print("Before Array Values\t");
+        for (int i = 0; i < array.length; i++) {
+            System.out.print("\t"+array[i]);
+        }
+
+        for (int i = 0; i < array.length; i++) {
+            int temp = array[i];
+            int j = i-1;
+
+            while (j >= 0 && temp <= array[j]) {
+                array[j+1] = array[j];
+                j = j-1;
+            }
+            array[j+1] = temp;
+        }
+
+        System.out.print("After Sorted Array :\t");
+        for (int i = 0; i < array.length; i++) {
+            System.out.print("\t"+array[i]);            
+        }
     }
 }
